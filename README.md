@@ -25,3 +25,7 @@ The V6O project is based on making a V60-style drip machine.
 
 2. **Second Way:**
 - using the UI that is included to chose the pours and the time between pours and the amount of time waiting between pours.
+
+## Showcase Video
+
+https://github.com/user/repo/assets/xxx/video1.mp4
