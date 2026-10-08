@@ -19,22 +19,14 @@ struct PulsePattern {
  * A single pour step in the brewing process.
  */
 struct PourStep {
+    uint32_t waitBeforeMs;
     uint32_t durationMs;
-    uint32_t restAfterMs;
-
-    PulsePattern pump;
-    PulsePattern plate;
-
-    float angleStart;
-    float angleEnd;
 };
 
 /**
  * A complete brewing profile.
  */
 struct BrewProfile {
-    uint32_t initialDelayMs;
-
     PourStep pours[MAX_POURS];
     size_t pourCount;
 };

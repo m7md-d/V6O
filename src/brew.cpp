@@ -9,15 +9,9 @@ void pour(const PourStep& step)
 
 void run(const BrewProfile& profile)
 {
-    waitMs(profile.initialDelayMs);
-
     for (size_t i = 0; i < profile.pourCount; i++) {
+        waitMs(profile.pours[i].waitBeforeMs);
         pour(profile.pours[i]);
-
-        // If it's not the last pour,
-        // wait for the rest period after the pour.
-        if (i + 1 < profile.pourCount)
-            waitMs(profile.pours[i].restAfterMs);
     }
 }
 

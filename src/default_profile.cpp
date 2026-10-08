@@ -6,40 +6,20 @@ namespace v6o {
  * The default brewing profile.
  */
 const BrewProfile DEFAULT_PROFILE = {
-    .initialDelayMs = 1000,
-
     .pours = {
         {
-            .durationMs = 10000,
-            .restAfterMs = 30000,
-
-            .pump = {500, 500},
-            .plate = {1000, 0},
-
-            .angleStart = 10.0f,
-            .angleEnd = 20.0f
+            .waitBeforeMs = 0,
+            .durationMs = 10000
         },
 
         {
-            .durationMs = 15000,
-            .restAfterMs = 20000,
-
-            .pump = {700, 300},
-            .plate = {1000, 0},
-
-            .angleStart = 20.0f,
-            .angleEnd = 15.0f
+            .waitBeforeMs = 30000,
+            .durationMs = 15000
         },
 
         {
-            .durationMs = 12000,
-            .restAfterMs = 0,
-
-            .pump = {500, 200},
-            .plate = {1000, 0},
-
-            .angleStart = 15.0f,
-            .angleEnd = 10.0f
+            .waitBeforeMs = 20000,
+            .durationMs = 12000
         }
     },
 
