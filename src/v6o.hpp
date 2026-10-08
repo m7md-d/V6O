@@ -50,6 +50,9 @@ void run();
 void run(const BrewProfile& profile);
 
 
+bool connectWifi();
+
+
 void onButtonPressed();
 void onApiRequest(const BrewProfile& profile);
 
