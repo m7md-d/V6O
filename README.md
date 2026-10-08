@@ -4,10 +4,24 @@ The V6O project is based on making a V60-style drip machine.
 
 ## Components
 * 12V water pump.
+* Servo.
+* ULN2003.
+* Arduino Nano ESP32.
+* Relay.
+* Button.
+* kettle.
+* Dripper.
 * Rotating plate that spins the dripper.
-* Pouring tube that moves its angle.
+* Two small hoses.
+
+## Requirements
+* <Stepper.h> Library.
+* <ESP32Servo.h>Library.
 
 ## Process
-* Starts in a specific way.
-* Number of pours.
-* Timing for each pour.
+### Starts in a specific way.
+1. **First Way:**
+- Press the button on the hardware side and it will start automaticly in default process.
+
+2. **Second Way:**
+- using the UI that is included to chose the pours and the time between pours and the amount of time waiting between pours.
