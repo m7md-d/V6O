@@ -28,4 +28,6 @@ The V6O project is based on making a V60-style drip machine.
 
 ## Showcase Video
 
-https://github.com/user/repo/assets/xxx/video1.mp4
+<p align="center">
+  <img src="assets/showcase.gif" alt="V6O Demo" />
+</p>
