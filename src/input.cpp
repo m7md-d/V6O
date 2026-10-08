@@ -13,8 +13,9 @@ void onButtonPressed()
 /**
  * Logical action.
  */
-void onApiRequest()
+void onApiRequest(const BrewProfile& profile)
 {
+    run(profile);
 }
 
 }

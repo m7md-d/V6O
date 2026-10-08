@@ -51,6 +51,6 @@ void run(const BrewProfile& profile);
 
 
 void onButtonPressed();
-void onApiRequest();
+void onApiRequest(const BrewProfile& profile);
 
 }
