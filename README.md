@@ -15,8 +15,9 @@ The V6O project is based on making a V60-style drip machine.
 * Two small hoses.
 
 ## Requirements
-* <Stepper.h> Library.
-* <ESP32Servo.h>Library.
+* [Arduino IDE](https://www.arduino.cc/en/software) with the [ESP32 board package](https://github.com/espressif/arduino-esp32).
+* [Stepper](https://github.com/arduino-libraries/Stepper) library.
+* [ESP32Servo](https://github.com/madhephaestus/ESP32Servo) library.
 
 ## Process
 ### Starts in a specific way.
