@@ -100,7 +100,7 @@ $("cards").onchange = (e) => {
 };
 
 $("plus").onclick = () => {
-  if (pours.length >= 12) return;
+  if (pours.length >= 10) return;
 
   pours.push({ duration: 15, wait: 5 });
   renderPours();
@@ -126,11 +126,34 @@ function resetBrew(message) {
   renderPours();
 }
 
-$("go").onclick = () => {
+$("go").onclick = async () => {
   if (run) return;
 
-  run = { time: 0, current: 1 };
   $("go").disabled = true;
+
+  try {
+    const res = await fetch("/api/brew", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        pours: pours.map((p, i) => ({
+          wait_s: i === 0 ? 0 : p.wait,
+          duration_s: p.duration,
+        })),
+      }),
+    });
+
+    if (res.status !== 202) {
+      const data = await res.json().catch(() => ({}));
+      resetBrew(data.error || "Failed to start brew");
+      return;
+    }
+  } catch {
+    resetBrew("Device not reachable");
+    return;
+  }
+
+  run = { time: 0, current: 1 };
   renderPours();
 
   // تفريغ الكوب
