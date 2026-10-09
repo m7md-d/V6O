@@ -97,6 +97,8 @@ bool parseProfile(const char* body, BrewProfile& profile)
         // Set the values in the profile
         profile.pours[i].waitBeforeMs = static_cast<uint32_t>(waitSeconds * 1000);
         profile.pours[i].durationMs = static_cast<uint32_t>(durationSeconds * 1000);
+        
+        profile.pours[i].pumpPulse = DEFAULT_PUMP_PULSE;
     }
 
 
