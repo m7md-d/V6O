@@ -1,3 +1,6 @@
+// address of the ESP32 you can find it on the serial monitor
+const DEVICE = "http://127.0.0.1";
+
 const $ = (id) => document.getElementById(id);
 
 function formatTime(seconds) {
@@ -132,9 +135,8 @@ $("go").onclick = async () => {
   $("go").disabled = true;
 
   try {
-    const res = await fetch("/api/brew", {
+    const res = await fetch(`${DEVICE}/api/brew`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         pours: pours.map((p, i) => ({
           wait_s: i === 0 ? 0 : p.wait,
