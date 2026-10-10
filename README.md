@@ -15,9 +15,19 @@ The V6O project is based on making a V60-style drip machine.
 * Two small hoses.
 
 ## Requirements
+* C++17 or newer.
 * [Arduino IDE](https://www.arduino.cc/en/software) with the [ESP32 board package](https://github.com/espressif/arduino-esp32).
 * [Stepper](https://github.com/arduino-libraries/Stepper) library.
 * [ESP32Servo](https://github.com/madhephaestus/ESP32Servo) library.
+
+
+## Getting started
+1. Install the ESP32 board package then the two libraries from the Library Manager.
+2. Rename `src/secrets.example.h` to `src/secrets.h` and type network name and password.
+3. Open `V6O.ino`, the folder and the sketch must have the same name.
+4. Open the serial monitor and note the address the device prints.
+5. Put that address in `DEVICE` at `UI/script.js`.
+6. Open `UI/index.html` in your browser.
 
 ## Process
 ### Starts in a specific way.

@@ -4,7 +4,6 @@ A simple page that shows a robot arm pouring water on coffee.
  
 You choose how long each pour is, and how long to wait between pours. Then you press Start.
  
-This is a test version. It is not connected to a real machine yet.
  
 ## Files
  
@@ -25,5 +24,5 @@ This is a test version. It is not connected to a real machine yet.
 ## Good to know
  
 - Each time can be from 5 to 60 seconds. Wait time can be from 0 to 60.
-- You can add up to 12 pours.
+- You can add up to 10 pours.
 - You cannot change anything while it is brewing.
